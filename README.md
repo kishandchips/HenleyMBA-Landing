@@ -1,2 +1,2 @@
-MSC Finance theme
-============================
+HenleyMBA-Landing
+=================
