@@ -72,6 +72,7 @@ body {
 
 	@media screen and (max-width:550px){
 		float: left;
+		width: 100%;
 
 		.number{
 			display: block;
@@ -80,7 +81,7 @@ body {
 
 		.call-icon{
 			position: absolute;
-			top:0;
+			top:5px;
 			right:0;
 		}
 
@@ -188,10 +189,9 @@ body {
 
 		li{
 			float:left;
-			margin-left: 1em;
 		}
 
-		a{
+		a {
 			display: inline-block;
 			padding:0.8em 1.4em;
 			font-size: 0.8em;
@@ -511,7 +511,7 @@ body {
 		}
 
 		#fsb-social-bar {
-			width: 100% !important;
+			// width: 100% !important;
 
 			.fsb-title {
 				font-weight: bold;

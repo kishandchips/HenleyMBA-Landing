@@ -1235,3 +1235,51 @@ $total_columns: length($columns);
 /* Scroller Support */
 .selecter .selecter-options.scroller { overflow: hidden; }
 .selecter .selecter-options.scroller .scroller-content { max-height: 260px; padding: 0; }
+
+.widget_sociallogin {
+
+	.loggedin {
+
+		@extend .clearfix;
+
+		.description {
+			@include lucida-regular;
+			@include font-size(13);
+		}
+		
+		h3 {
+			@include font-size(18);
+			text-align: center;
+		}
+
+		.button {
+			float: right;
+			margin-top: 30px;
+		}
+	}
+
+	.loggedout {
+
+		#wp-social-login-connect-with {
+			@extend h3;
+			@include font-size(18);
+			display: block;			
+		}
+
+		#wp-social-login-connect-options {
+			a {
+				margin: 10px 0;
+				display: block;
+
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+#fsb-social-bar {
+	margin: 0 !important;
+}

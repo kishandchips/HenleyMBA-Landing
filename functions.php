@@ -1,18 +1,18 @@
 <?php
 /**
- * mscfinance theme functions and definitions
+ * landing-mba theme functions and definitions
  *
- * @package mscfinance
- * @since mscfinance 1.0
+ * @package landing-mba
+ * @since landing-mba 1.0
  */
 
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
- * @since mscfinance 1.0
+ * @since landing-mba 1.0
  */
 
-if ( ! function_exists( 'mscfinance_setup' ) ):
+if ( ! function_exists( 'landing_mba_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,24 +20,25 @@ if ( ! function_exists( 'mscfinance_setup' ) ):
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since mscfinance 1.0
+ * @since landing-mba 1.0
  */
-function mscfinance_setup() {
+function landing_mba_setup() {
 
 	require( get_template_directory() . '/inc/options.php' );
+	require( get_template_directory() . '/inc/widgets/social-login.php' );
 
 	register_nav_menus( array(
-		'primary_header' => __( 'Primary Header Menu', 'mscfinance' ),
-		'primary_footer' => __( 'Primary Footer Menu', 'mscfinance' ),
-		'secondary_footer' => __( 'Secondary Footer Menu', 'mscfinance' ),
-		'header_top_nav' => __( 'Header Top Navigation', 'mscfinance' ),
+		'primary_header' => __( 'Primary Header Menu', 'landing_mba' ),
+		'primary_footer' => __( 'Primary Footer Menu', 'landing_mba' ),
+		'secondary_footer' => __( 'Secondary Footer Menu', 'landing_mba' ),
+		'header_top_nav' => __( 'Header Top Navigation', 'landing_mba' ),
 	) );	
 
 	add_editor_style('css/editor-styles.css');
 
 	add_filter('widget_text', 'do_shortcode');
 }
-endif; // mscfinance_setup
+endif; // landing_mba_setup
 
 add_shortcode('call', 'call_function');
 function call_function() {
@@ -49,7 +50,7 @@ function call_function() {
 }
 
 
-add_action( 'after_setup_theme', 'mscfinance_setup' );
+add_action( 'after_setup_theme', 'landing_mba_setup' );
 
 if (function_exists('register_sidebar')) {
 	register_sidebar(array(
@@ -94,10 +95,6 @@ if ( ! function_exists( 'custom_tinymce_options' )) {
 	}
 }
 
-function get_mscfinance_option($option){
-	$options = get_option('mscfinance_theme_options');
-	return $options[$option];
-}
 
 add_action('init', 'set_custom_post_types');
 

@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package kishandchips
- * @since kishandchips 1.0
+ * @package landing-mba
+ * @since landing-mba 1.0
  */
 
 get_header(); ?>
