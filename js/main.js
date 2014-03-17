@@ -261,6 +261,23 @@
 			});			
 		},
 
+		stickyfloat: function() {
+			bar = $('.floating-social-bar');
+			parent = $('.post');
+			parentOffset = parent.offset();
+
+			parentViewOffsetTop = parentOffset.top - $(document).scrollTop();	
+			barViewportOffsetLeft = bar.offset().left;
+			
+			if 	(parentViewOffsetTop < 0) {
+				bar.css('left', barViewportOffsetLeft);
+				bar.addClass('fixed');
+			} else {
+				bar.removeClass('fixed');
+				bar.css('left', '-100px');
+			}
+		},
+
 		equalHeight: function(){
 			if($('.equal-height').length !== 0){
 		
@@ -338,7 +355,10 @@
 	$(window).scroll(function() {
 		if ($(window).width() > 1000) {
 		    main.slideUpBox();
-		}	
+		    main.stickyfloat();
+		}
+
+
 	});
 	
 	$(window).resize(function() {

@@ -50,7 +50,7 @@ body {
 	.number{
 		font-size: 0.875em;
 		display: inline-block;
-		margin-left: 1em;
+		margin: 1em 0 0 1em;
 
 		&:first-child{
 			margin:0;
@@ -89,7 +89,7 @@ body {
 }// call us
 
 #header {
-	margin-bottom:32px;
+	margin-bottom:22px;
 
 	.container {
 		position: relative;
@@ -185,7 +185,11 @@ body {
 
 		li{
 			float:left;
-			margin-left: 15px;
+			margin: 0 0 0 15px;
+
+			@include device-width(7) {
+				margin: 0;
+			}
 		}
 
 		a {
@@ -194,6 +198,10 @@ body {
 			font-size: 1em;
 			line-height: 1;
 			text-transform: uppercase;
+
+			@include device-width(9) {
+				padding:0.8em 1.3em;
+			}			
 
 			&:hover{
 				color: #fff;
@@ -235,7 +243,7 @@ body {
 
 	&.container {
 		margin: 0 auto;
-		border-bottom: 45px solid #244787;
+		border-bottom: 39px solid #244787;
 
 		@media screen and (max-width:700px){
 			border-bottom:5px;
@@ -503,17 +511,6 @@ body {
 	  		@include font-size(30);
 		}
 
-		#fsb-social-bar {
-			// width: 100% !important;
-
-			.fsb-title {
-				font-weight: bold;
-				line-height: 26px;
-				color: #244787;
-				font-family: Helvetica, "Trebuchet MS", sans-serif;
-			}
-		}
-
 		.content{
 			padding:2.8125em;
 			
@@ -521,6 +518,10 @@ body {
 				padding-right:0;
 				padding-left:0;
 			}
+		}
+
+		.post {
+			position: relative;
 		}
 
 		.row {
@@ -1362,12 +1363,22 @@ body {
 
 	.bottom-nav {
 		line-height: 40px;
-		height: 40px;
 		background: #000;
 		color: #FFF;
 
+		.container {
+
+			@media screen and (max-width:1180px){
+				padding: 0 15px;
+			}			
+		}
+
 		.copyright {
 			float: right;
+
+			@include device-width(5) {
+				display: block;
+			}
 		}
 
 		#menu-seconday-footer {
@@ -1601,16 +1612,21 @@ body {
 }
 
 .floating-social-bar {
-	position: fixed;
+	position: absolute;
 	display: block;
-	left: 20px;
-	top: 20%;
+	left: -100px;
+	top: 50px;
 	width: 80px;
 	padding: 5px 0;
 	text-align: center;	
 	border: 1px solid #CCC;
 	@include border-radius(5px);
 	background: #FFF;
+
+	&.fixed {
+		position: fixed;
+		left: 10px;
+	}
 
 	.social {
 		margin: 10px 0;
@@ -1622,5 +1638,5 @@ body {
 
 	@media screen and (max-width:1335px){
 		display: none;
-	}	
+	}
 }

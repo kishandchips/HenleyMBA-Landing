@@ -76,7 +76,7 @@ cc.initialise({
 	<div id="page">
 		<div class="container">
 			<div class="call-us">
-				<p class="number">Call Now: <span class="rTapNumber74358">07595 292 684</span></p>
+				<p class="number">Freephone: <span class="rTapNumber74358">07595 292 684</span></p>
 				<p class="number">International: <span class="rTapNumber74357">07595 292 684</span></p>
 				<i class="call-icon"></i>
 			</div>
