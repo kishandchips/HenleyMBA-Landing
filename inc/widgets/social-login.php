@@ -21,8 +21,14 @@ class SocialLogin extends WP_Widget {
 
        	<?php if ( is_user_logged_in() ): ?>
           <div class="loggedin">
+
+          <?php if (current_user_can( 'manage_options' )): ?>
+                <h3><?php _e('You are logged in as Administrator ') ?></h3>
+                <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="button">Logout</a>    
+          <?php else: ?>
               <h3><?php _e('You are logged in with social account. ') ?></h3>
-              <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="button">Logout</a>
+              <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="button">Logout</a>            
+          <?php endif; ?>          
           </div>
 		    <?php else: ?>
           <div class="loggedout">

@@ -83,6 +83,12 @@ get_header(); ?>
 					  })();
 					</script>
 				</div>
+				<div class="linkedin social">
+					<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					  lang: en_US
+					</script>
+					<script type="IN/Share" data-url="http://dev.kishandchips.com/landing-mba/website/build/" data-counter="top"></script>					
+				</div>
 			</div>
 		
 			<?php if(!$post->post_content == ''): ?>
