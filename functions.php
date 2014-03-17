@@ -182,6 +182,14 @@ if ( ! function_exists( 'get_current_url' )) {
 	}
 }
 
+function modify_contact_methods($profile_fields) {
+
+	// Add new fields
+	$profile_fields['phone'] = 'Phone Number';
+	return $profile_fields;
+}
+add_filter('user_contactmethods', 'modify_contact_methods');
+
 
 
 add_action('gform_after_submission', 'send_lead_form_data', 10, 2);

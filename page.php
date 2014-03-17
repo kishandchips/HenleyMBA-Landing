@@ -31,17 +31,17 @@ get_header(); ?>
 									<?php while (the_repeater_field('slideshow')) : ?>					
 									<div class="scroll-item <?php if($i == 0) echo 'current'; ?>" data-id="<?php echo $i;?>">
 										<img class="scale" src="<?php the_sub_field('image'); ?>" alt="<?php the_sub_field('title'); ?>">
-<!-- 										<span class="title <?php the_sub_field('title_position'); ?>" style="background-color: <?php the_sub_field('title_background_colour'); ?>;">
+										<span class="title <?php the_sub_field('title_position'); ?>" style="background-color: <?php the_sub_field('title_background_colour'); ?>;">
 											<?php the_sub_field('title'); ?>
-										</span> -->
+										</span> 
 									</div>
 									<?php $i++; ?>
 									<?php endwhile; ?>
 								</div>
-<!-- 								<div class="scroller-navigation">
+								<div class="scroller-navigation">
 									<a class="prev-btn icons-arrow-left"></a>
 									<a class="next-btn icons-arrow-right"></a>
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</div><!-- #homepage-scroller -->			
@@ -58,10 +58,6 @@ get_header(); ?>
 			</div>	
 		<?php endif; ?>	
 		<!-- end slideshow -->
-		<?php
-			if ( function_exists( 'floating_social_bar' ) )
-				floating_social_bar();
-		?>
 		<?php if(!$post->post_content == ''): ?>
 		<div class="page-content">
 		<?php the_content(); ?>

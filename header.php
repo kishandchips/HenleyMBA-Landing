@@ -68,35 +68,22 @@ cc.initialise({
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "http:/connect.facebook.net/en_GB/all.js#xfbml=1&appId=579639135402354";
+  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=579639135402354";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+}(document, 'script', 'facebook-jssdk'));</script>
+
 
 	<div id="page">
 		<div class="container">
 			<div class="call-us">
-				<p class="number">Call Now: <span class="rTapNumber72710">07595292684</span></p>
-				<p class="number">International: <span class="rTapNumber72713">07595292684</span></p>
+				<p class="number">Call Now: <span class="rTapNumber74358">07595 292 684</span></p>
+				<p class="number">International: <span class="rTapNumber74357">07595 292 684</span></p>
 				<i class="call-icon"></i>
 			</div>
-
-<!-- 			<div id="top-nav" class="clearfix">
-				<div class="socials">
-				<div class="fb-like" data-href="https://www.facebook.com/henleymba" data-layout="button_count"></div>
-					<div class="g-plusone" data-size="medium" data-href="<?php bloginfo( 'url' ); ?>"></div>
-					<div class="tweet-button"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-					</div>
-				</div>			
-			</div>	 -->	
 		</div>
 		<header id="header" role="banner">
 			<div class="container">
 				<div class="logos">
-					<a href="<?php bloginfo( 'url' ); ?>" class="logo reading" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-						<img src="<?php bloginfo('template_url')?>/images/logos/site-reading.png" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
-					</a>
 					<a href="<?php bloginfo( 'url' ); ?>" class="logo henley-bus" title="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 						<img src="<?php bloginfo('template_url')?>/images/logos/site.jpg" alt="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 					</a>				

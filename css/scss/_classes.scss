@@ -426,7 +426,7 @@ hr {
 
 	.scroller-navigation {
 		position: absolute;
-		bottom: 3em;
+		bottom: 0px;
 		right: 1px;
 		height: 0;
 		z-index: 200;
@@ -438,14 +438,14 @@ hr {
 		.prev-btn,
 		.next-btn {
 			width: 3em;
-			height: 3em;
+			height: 46px;
 			position: relative;
 			display: inline-block;
-			background: #FFF;
-			background: rgba(#FFF, 0.8);
+			color: #FFF;
 			&:hover,
 			&.hover {
 				background: #FFF;
+				color: #244787;
 			}	
 
 			&:before {
