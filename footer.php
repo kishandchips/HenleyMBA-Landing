@@ -47,7 +47,7 @@
 		</div>
 	</div>
 <?php endif; ?>
-
+<?php wp_footer(); ?>
 <!-- responseTAP -->
 <script type="text/javascript">
    var adiInit = "11230", adiRVO = true;
@@ -62,6 +62,5 @@
    })();
 </script>
 <!--end of responseTAP -->
-<?php wp_footer(); ?>
 </body>
 </html>
