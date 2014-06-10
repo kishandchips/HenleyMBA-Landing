@@ -548,6 +548,10 @@ body {
 						}
 					}					
 				}
+			}
+
+			&.accordion {
+				padding: 2.8125em;
 			}	
 
 			ol {
@@ -774,7 +778,7 @@ body {
 					width: 48%;
 					margin: 10px 1%;					
 					float: left;
-				}		
+				}
 
 				@include device-width(5) {
 					width: 100%;
@@ -849,10 +853,10 @@ body {
 
 		#call-box{
 			@include box-sizing(border-box);
-			padding-left:20%;
+			padding-left:5%;
 			padding-bottom: 2em;
 			border-bottom:1px solid #D1D1D1;
-			background-image: url(../images/misc/phone-icon.png);
+			//background-image: url(../images/misc/phone-icon.png);
 			background-repeat: no-repeat;
 			background-position: 0 80%;
 
@@ -886,7 +890,7 @@ body {
 				margin-top: 0;
 				margin-bottom: 0.3em;
 				padding-top: 2em;
-				padding-left:20%;
+				padding-left:5%;
 				color: #12108d;
 				font-size: 1.43em;
 				border-top: 1px solid #D1D1D1;
@@ -1080,7 +1084,6 @@ body {
 	#cloudIqPopupButton {
 		margin: 30px 0 0 0;
 		display: inline-block;
-		@extend .right;
 		position: static;
 	}
 	
